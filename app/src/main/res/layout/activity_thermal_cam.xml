@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorP"
+    tools:context=".views.activities.ThermalCamActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/uppperToolbar"
+        android:background="?attr/colorPDOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="end"
+            app:cardBackgroundColor="?attr/backButton">
+            <ImageView
+                android:padding="5dp"
+                android:rotation="90"
+                android:id="@+id/imageViewBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_black_24dp"/>
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:rotation="90"
+            android:src="@drawable/tuliplog"
+            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewEndo"
+            android:layout_gravity="top"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="?attr/backButton">
+            <ImageView
+                android:padding="5dp"
+                android:rotation="90"
+                android:id="@+id/imageViewEndo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_temperature_white"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_below="@id/uppperToolbar"
+        android:layout_above="@id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_above="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:id="@+id/final_ir_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <FrameLayout
+        android:layout_above="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:id="@+id/temp_display_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/temp_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/focus_temp_display1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            android:layout_gravity="top|center_horizontal"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="@dimen/cross_width"
+            android:layout_height="@dimen/cross_height"
+            android:layout_gravity="center"
+            android:src="@drawable/center_cross" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_above="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:id="@+id/human_temp_display_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/human_temp_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="?attr/colorPD"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="150dp">
+
+            <androidx.cardview.widget.CardView
+                android:rotation="90"
+                android:id="@+id/cardViewBT"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_alignParentEnd="true"
+                android:elevation="0dp"
+                app:cardBackgroundColor="?attr/colorA">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:padding="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lato"
+                        android:text="@string/hottest_body_temp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/focus_temp_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lato_thin"
+                        android:text=""
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="35sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewBodyTemperature"
+                android:rotation="90"
+                android:layout_toStartOf="@id/cardViewBT"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="?attr/colorA">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:padding="15dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato"
+                        android:text="@string/body_temperature"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textViewBodyTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lato_thin"
+                        android:text=""
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="35sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewTemperature"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/cardViewBodyTemperature"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="100dp"
+                android:elevation="10dp"
+                android:onClick="onTempBtnClicked"
+                app:cardBackgroundColor="@color/red"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="45dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_temperature_white"
+                    android:layout_centerHorizontal="true"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewValidate"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                app:cardCornerRadius="200dp"
+                app:cardBackgroundColor="@color/green">
+                <ImageView
+                    android:padding="15dp"
+                    android:id="@+id/imageViewSave"
+                    android:rotation="90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_check_24"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

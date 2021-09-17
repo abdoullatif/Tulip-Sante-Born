@@ -1,0 +1,427 @@
+//            paysDao.insert(new Pays(
+//                    "1001",
+//                    "Guinea",
+//                    ""
+//            ));
+//            regionDao.insert(new Region(
+//                    "2001",
+//                    "Conakry",
+//                    "1001",
+//                    ""
+//            ));
+//            communeDao.insert(new Commune(
+//                    "3001",
+//                    "Dixinn",
+//                    "2001",
+//                    ""
+//            ));
+//            addresseDao.insert(new Addresse(
+//                            "4001",
+//                            "near donka chu",
+//                            "3001",
+//                            ""
+//                    )
+//            );
+//            addresseDao.insert(new Addresse(
+//                            "4002",
+//                            "Camayenne",
+//                            "3001",
+//                            ""
+//                    )
+//            );
+//            patientDao.insert(new Patient(
+//                    "TAB-TLP-1D212",
+//                    "Diallo",
+//                    "Alpha",
+//                    "Male",
+//                    "12/12/1992",
+//                    "B+",
+//                    "/storage/emulated/0/DCIM/Camera/901146.jpg",
+//                    "100020303030",
+//                    "BBC46732",
+//                    "Guinean",
+//                    "Marrier",
+//                    "4002",
+//                    "12/12/2020",
+//                    ""
+//                    )
+//            );
+//            patientDao.insert(new Patient(
+//                    "TAB-TLP-1D211",
+//                    "Souare",
+//                    "Abdourahmane",
+//                    "Male",
+//                    "12/12/1992",
+//                    "B+",
+//                    "/storage/emulated/0/DCIM/Camera/IMG_20190829_112351.jpg",
+//                    "100020303030",
+//                    "BBC46732",
+//                    "Guinean",
+//                    "Marrier",
+//                    "4002",
+//                    "12/12/2020",
+//                    ""
+//                    )
+//            );
+//            patientDao.insert(new Patient(
+//                    "TAB-TLP-1D214",
+//                    "Kader",
+//                    "Abdoulrashid",
+//                    "Male",
+//                    "12/12/1992",
+//                    "B+",
+//                    "/storage/emulated/0/DCIM/Camera/IMG_20190829_111540.jpg",
+//                    "100020303030",
+//                    "32",
+//                    "Guinean",
+//                    "Marrier",
+//                    "4002",
+//                    "12/12/2020",
+//                    ""
+//                    )
+//            );
+//            hopitalDao.insert(new Hopital(
+//                    "1001",
+//                    "CHU-DONKA",
+//                    "4002",
+//                    ""
+//            ));
+//            departementDao.insert( new Departement(
+//                    "1001",
+//                    "Urologie",
+//                    "1001",
+//                    ""
+//                    )
+//            );
+//            specialiteDao.insert(new Specialite(
+//                    "1001",
+//                    "Urologue",
+//                    ""
+//            ));
+//            medecinDao.insert(new Medecin(
+//                    "1001",
+//                    "1001",
+//                    "1001",
+//                    "Sow",
+//                    "Alimou",
+//                    "Male",
+//                    "12/02/1980",
+//                    "BBC46732",
+//                    "",
+//                    "/storage/emulated/0/Xender/image/afro-doc.jpg",
+//                    "4001",
+//                    "Married"
+//            ));
+//            utilisateurDao.insert(new Utilisateur(
+//                    "1001",
+//                    "1001",
+//                    "alpha",
+//                    "7288edd0fc3ffcbe93a0cf06e3568e28521687bc",
+//                    "alpha@test.com",
+//                    " "
+//            ));
+//            contactDao.insert(new Contact(
+//                    "1001",
+//                    "1001",
+//                    "669909090",
+//                    "668000000",
+//                    "alimou@test.com",
+//                    " "
+//            ));
+//            contactDao.insert(new Contact(
+//                    "1002",
+//                    "TAB-TLP-1D212",
+//                    "669909090",
+//                    "668000000",
+//                    "alpha@test.com",
+//                    " "
+//            ));
+//
+//            contactUrgenceDao.insertContactUrgence(new ContactUrgence(
+//                    "1001",
+//                    "1001",
+//                    "Parent",
+//                    "Houssai",
+//                    "668594534",
+//                    ""
+//            ));
+//            contactUrgenceDao.insertContactUrgence(new ContactUrgence(
+//                    "1002",
+//                    "TAB-TLP-1D212",
+//                    "Parent",
+//                    "Houssai",
+//                    "668594534",
+//                    ""
+//            ));
+//            permissionDao.insertPermission(new Permission(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "2021-03-12",
+//                    "2021-04-03",
+//                    "public",
+//                    "",
+//                    ""
+//            ));
+//            viceDao.insertVice(new Vice(
+//                    "1001",
+//                    "Smoking",
+//                    ""
+//            ));
+//            viceDao.insertVice(new Vice(
+//                    "1002",
+//                    "Drinking",
+//                    ""
+//            ));
+//            viceDao.insertVice(new Vice(
+//                    "1003",
+//                    "Hailing",
+//                    ""
+//            ));
+//            allergieDao.insertAllergie(new Allergie(
+//                    "1001",
+//                    "food",
+//                    "Lactose",
+//                    ""
+//            ));
+//            allergieDao.insertAllergie(new Allergie(
+//                    "1002",
+//                    "food",
+//                    "Glucose",
+//                    ""
+//            ));
+//            allergieDao.insertAllergie(new Allergie(
+//                    "1003",
+//                    "drug",
+//                    "Quinine",
+//                    ""
+//            ));
+//            allergieDao.insertAllergie(new Allergie(
+//                    "1004",
+//                    "drug",
+//                    "Paracetamol",
+//                    ""
+//            ));
+//            maladieDao.insertMaladie(new Maladie(
+//                    "1001",
+//                    "Ebola",
+//                    "Viral",
+//                    ""
+//            ));
+//            maladieDao.insertMaladie(new Maladie(
+//                    "1002",
+//                    "Corona",
+//                    "Viral",
+//                    ""
+//            ));
+//            maladieDao.insertMaladie(new Maladie(
+//                    "1003",
+//                    "H1N1",
+//                    "Viral",
+//                    ""
+//            ));
+//            symptomeDao.insertSymptome(new Symptome(
+//                    "1001",
+//                    "H1N1",
+//                    "Headache",
+//                    ""
+//            ));
+//            symptomeDao.insertSymptome(new Symptome(
+//                    "1002",
+//                    "H1N1",
+//                    "Migraine",
+//                    ""
+//            ));
+//            symptomeDao.insertSymptome(new Symptome(
+//                    "1003",
+//                    "H1N1",
+//                    "Stomach Ache",
+//                    ""
+//            ));
+//            symptomeDao.insertSymptome(new Symptome(
+//                    "1004",
+//                    "H1N1",
+//                    "Sinuses",
+//                    ""
+//            ));
+//            typeExamensDao.insertTypeExamens(new TypeExamens(
+//                    "1001",
+//                    "X-Ray",
+//                    "",
+//                    ""
+//            ));
+//            typeExamensDao.insertTypeExamens(new TypeExamens(
+//                    "1002",
+//                    "Ultrasound",
+//                    "",
+//                    ""
+//            ));
+//            // consultation
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "01/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "02/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "02/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "03/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "04/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "05/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "06/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "07/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "07/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            consultationDao.insertNewConsultation(new Consultation(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "07/03/2021",
+//                    "TAB-TLP-1D212",
+//                    "1001",
+//                    "Emergency",
+//                    ""
+//            ));
+//            // end consultation
+//            categorieSigneVitauxDao.insertCatSignesVitaux(new CategorieSigneVitaux(
+//                    "1001",
+//                    "Height(cm)",
+//                    ""
+//            ));
+//            categorieSigneVitauxDao.insertCatSignesVitaux(new CategorieSigneVitaux(
+//                    "1002",
+//                    "Weight(kg)",
+//                    ""
+//            ));
+//            categorieSigneVitauxDao.insertCatSignesVitaux(new CategorieSigneVitaux(
+//                    "1003",
+//                    "Heart Rate(BPM)",
+//                    ""
+//            ));
+//            nouvellesDao.insertNouvelles(new Nouvelles(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "Meeting at 10 AM",
+//                    "Nous avons un meeting avec le directeur dans les bandes de 10h tapante",
+//                    "21/02/2021",
+//                    ""
+//            ));
+//            nouvellesDao.insertNouvelles(new Nouvelles(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "Meeting at 4 PM",
+//                    "Nous avons un meeting avec le directeur dans les bandes de 10h tapante",
+//                    "22/02/2021",
+//                    ""
+//            ));
+//            nouvellesDao.insertNouvelles(new Nouvelles(
+//                    GeneralPurposeFunctions.idTable(),
+//                    "Meeting at 9 AM",
+//                    "Nous avons un meeting avec le directeur dans les bandes de 10h tapante",
+//                    "23/02/2021",
+//                    ""
+//            ));
+//
+//            allergiePatientDao.insertAllergiePatient(new AllergiePatient(
+//                    "1001",
+//                    "1001",
+//                    "TAB-TLP-1D212",
+//                    ""
+//            ));
+//            allergiePatientDao.insertAllergiePatient(new AllergiePatient(
+//                    "1002",
+//                    "1002",
+//                    "TAB-TLP-1D212",
+//                    ""
+//            ));
+//            allergiePatientDao.insertAllergiePatient(new AllergiePatient(
+//                    "1003",
+//                    "1003",
+//                    "TAB-TLP-1D212",
+//                    ""
+//            ));
+//            typeVaccinationDao.insertTypeVaccination(new TypeVaccination(
+//                    "1001",
+//                    "Malaria",
+//                    "5",
+//                    ""
+//            ));
+//            typeVaccinationDao.insertTypeVaccination(new TypeVaccination(
+//                    "1002",
+//                    "Covid J&J",
+//                    "2",
+//                    ""
+//            ));
+//            typeVaccinationDao.insertTypeVaccination(new TypeVaccination(
+//                    "1003",
+//                    "Covid Moderna",
+//                    "2",
+//                    ""
+//            ));
+//            relationDao.insertRelation(new Relation(
+//                    "1001",
+//                    "TAB-TLP-1D212",
+//                    "TAB-TLP-1D211",
+//                    "Parent",
+//                    ""
+//            ));
+//            conferenceContactDao.insert(new ConferenceContact(
+//                    "1001",
+//                    "1001",
+//                    "Sooba Abdoulatif",
+//                    "live:abdoullatifsooba_1",
+//                    ""
+//            ));

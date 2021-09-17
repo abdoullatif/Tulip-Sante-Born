@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorPD" format="reference"/>
+    <attr name="colorP" format="reference"/>
+    <attr name="colorA" format="reference"/>
+    <attr name="colorA2" format="reference"/>
+    <attr name="primaryTextColor" format="reference"/>
+    <attr name="buttonNormalColor" format="reference"/>
+    <attr name="opaque2" format="reference"/>
+    <attr name="opaque" format="reference"/>
+    <attr name="backButton" format="reference"/>
+    <attr name="colorPOther" format="reference"/>
+    <attr name="colorPSDOther" format="reference"/>
+    <attr name="colorPDOther" format="reference"/>
+    <attr name="secondaryTextColor" format="reference"/>
+    <attr name="colorConsultationTools" format="reference"/>
+</resources>
