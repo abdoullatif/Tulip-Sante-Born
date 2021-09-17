@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="#283F5F"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="#283F5F"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="right"
+
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#283F5F"
+                android:layout_height="310dp">
+
+                <com.example.tulipsante.pulse.oximeter.view.frg.arcView
+                    android:id="@+id/gauge1"
+                    android:layout_width="350dp"
+                    android:layout_height="300dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+
+
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    app:gaugeEndValue="1000"
+                    app:gaugePointEndColor="@color/white"
+                    app:gaugePointSize="5"
+                    app:gaugePointStartColor="@color/white"
+                    app:gaugeStartAngle="135"
+                    app:gaugeStartValue="0"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="@color/red"
+                    app:gaugeStrokeWidth="10dp"
+
+                    app:gaugeSweepAngle="70" />
+
+                <TextView
+                    android:id="@+id/spo2Val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:textSize="70dp"
+                    android:text="70" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+
+                    android:layout_toEndOf="@+id/spo2Val"
+                    android:textSize="20dp"
+                    android:text="%" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/white"
+
+                    android:text="70" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="252dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/white"
+
+                    android:text="100" />
+                <ImageView
+                    android:id="@+id/img_heart2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="166dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/coeur" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+
+            android:layout_alignParentBottom="true"
+
+
+            android:orientation="vertical"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:textColor="@color/white"
+                android:text="PI" />
+            <TextView
+                android:id="@+id/pi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/white"
+                android:text="..." />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="right"
+
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="310dp">
+
+
+            <com.example.tulipsante.pulse.oximeter.view.frg.arcView2
+                android:id="@+id/gauge2"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center"
+
+
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                app:gaugePointStartColor="@color/white"
+                app:gaugePointEndColor="@color/white"
+
+                app:gaugeStartAngle="135"
+                app:gaugeStrokeCap="ROUND"
+                app:gaugeStrokeColor="@color/red"
+                app:gaugeStrokeWidth="10dp"
+                app:gaugeStartValue="0"
+                app:gaugeEndValue="1000"
+
+
+                app:gaugeSweepAngle="50" />
+
+                <TextView
+                    android:id="@+id/bmpVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+
+                    android:layout_centerInParent="true"
+                    android:textSize="70dp"
+                    android:text="50" />
+
+                  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginBottom="30dp"
+                      android:textColor="@color/white"
+
+                    android:text="50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="252dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/white"
+
+                    android:text="230" />
+                <ImageView
+                    android:id="@+id/img_heart1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="166dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/pomon" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="#283F5F"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#283F5F"
+                android:orientation="horizontal">
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/ageChosse"
+                    android:checkedButton="@+id/ch"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="#1A99C4"
+                        android:textColor="@color/white"
+
+                        android:text="kid"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/wm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="#1A99C4"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:text="woman" />
+                    <RadioButton
+                        android:id="@+id/m"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:buttonTint="#1A99C4"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:text="man" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_marginTop="20dp"
+                   android:layout_height="match_parent">
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/man"
+                       android:background="#283F5F"
+
+                       android:orientation="vertical">
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+
+                           android:layout_height="45dp">
+                           <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                               android:id="@+id/age11"
+                               android:layout_width="150dp"
+                               android:layout_height="38dp"
+
+                               android:layout_centerVertical="true"
+
+                               android:paddingLeft="20dp"
+                               app:gaugeSweepAngle="0"
+                               />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_toRightOf="@+id/age11"
+                               android:textColor="@color/white"
+                               android:layout_centerVertical="true"
+                               android:text="18 - 25 old" />
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+
+                           android:layout_height="45dp">
+                           <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                               android:id="@+id/age12"
+                               android:layout_width="150dp"
+                               android:layout_height="38dp"
+                               android:layout_centerVertical="true"
+                               android:paddingLeft="20dp"
+                               app:gaugeSweepAngle="0"
+                               />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_toRightOf="@+id/age12"
+                               android:textColor="@color/white"
+                               android:layout_centerVertical="true"
+                               android:text="26 - 35 old" />
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+
+                           android:layout_height="45dp">
+                           <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                               android:id="@+id/age13"
+                               android:layout_width="150dp"
+                               android:layout_height="38dp"
+                               android:layout_centerVertical="true"
+                               android:paddingLeft="20dp"
+                               app:gaugeSweepAngle="0"
+                               />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_toRightOf="@+id/age13"
+                               android:textColor="@color/white"
+                               android:layout_centerVertical="true"
+                               android:text="36 - 45 old" />
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+
+                           android:layout_height="45dp">
+
+                           <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                               android:id="@+id/age14"
+                               android:layout_width="150dp"
+                               android:layout_height="38dp"
+                               android:layout_centerVertical="true"
+                               android:paddingLeft="20dp"
+                               app:gaugeSweepAngle="0" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_toRightOf="@+id/age14"
+                               android:textColor="@color/white"
+                               android:layout_centerVertical="true"
+                               android:text="46 - 55 old" />
+                       </RelativeLayout>
+
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+
+                           android:layout_height="45dp">
+
+                           <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                               android:id="@+id/age15"
+                               android:layout_width="150dp"
+                               android:layout_height="38dp"
+                               android:layout_centerVertical="true"
+                               android:paddingLeft="20dp"
+                               app:gaugeSweepAngle="0" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_toRightOf="@+id/age15"
+                               android:textColor="@color/white"
+                               android:layout_centerVertical="true"
+                               android:text="56 - 65 old" />
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+
+                           android:layout_height="45dp">
+                           <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                               android:id="@+id/age16"
+                               android:layout_width="150dp"
+                               android:layout_height="38dp"
+                               android:layout_centerVertical="true"
+                               android:paddingLeft="20dp"
+                               app:gaugeSweepAngle="0"
+                               />
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_toRightOf="@+id/age16"
+                               android:textColor="@color/white"
+                               android:layout_centerVertical="true"
+                               android:text="66 - plus old" />
+
+
+
+                       </RelativeLayout>
+
+
+                   </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/woman"
+                android:background="#283F5F"
+
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp">
+                    <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                        android:id="@+id/age5"
+                        android:layout_width="150dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        app:gaugeSweepAngle="0"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/age5"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="18 - 25 old" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp">
+                    <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                        android:id="@+id/age6"
+                        android:layout_width="150dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        app:gaugeSweepAngle="0"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/age6"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="26 - 35 old" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp">
+                    <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                        android:id="@+id/age7"
+                        android:layout_width="150dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        app:gaugeSweepAngle="0"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/age7"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="36 - 45 old" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp">
+
+                    <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                        android:id="@+id/age8"
+                        android:layout_width="150dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        app:gaugeSweepAngle="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/age8"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="46 - 55 old" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp">
+
+                    <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                        android:id="@+id/age9"
+                        android:layout_width="150dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        app:gaugeSweepAngle="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/age9"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="56 - 65 old" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp">
+                    <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                        android:id="@+id/age10"
+                        android:layout_width="150dp"
+                        android:layout_height="38dp"
+
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="20dp"
+                        app:gaugeSweepAngle="0"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/age10"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:text="66 - plus old" />
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+
+                     android:id="@+id/child"
+                   android:background="#283F5F"
+
+                   android:orientation="vertical">
+
+
+
+
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="50dp">
+                       <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                           android:id="@+id/age1"
+                           android:layout_width="150dp"
+                           android:layout_height="38dp"
+
+                           android:layout_centerVertical="true"
+
+                           android:paddingLeft="20dp"
+                           app:gaugeSweepAngle="50"
+                           />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:layout_toRightOf="@+id/age1"
+                           android:textColor="@color/white"
+                           android:text="0 - 3 month" />
+
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+
+                       android:layout_height="50dp">
+                       <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                           android:id="@+id/age2"
+                           android:layout_width="150dp"
+                           android:layout_height="38dp"
+
+                           android:layout_centerVertical="true"
+                           android:paddingLeft="20dp"
+                           app:gaugeSweepAngle="0"
+                           />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@+id/age2"
+                           android:textColor="@color/white"
+                           android:layout_centerVertical="true"
+                           android:text="3 month - 2 old" />
+
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+
+                       android:layout_height="50dp">
+                       <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                           android:id="@+id/age3"
+                           android:layout_width="150dp"
+                           android:layout_height="38dp"
+
+                           android:layout_centerVertical="true"
+
+                           android:paddingLeft="20dp"
+                           app:gaugeSweepAngle="0"
+                           />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@+id/age3"
+                           android:textColor="@color/white"
+                           android:layout_centerVertical="true"
+                           android:text="2 - 10 old" />
+
+                   </RelativeLayout>
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+
+                       android:layout_height="55dp">
+                       <com.example.tulipsante.pulse.oximeter.view.frg.rectangle
+                           android:id="@+id/age4"
+                           android:layout_width="150dp"
+                           android:layout_height="38dp"
+
+                           android:layout_centerVertical="true"
+                           android:paddingLeft="20dp"
+                           app:gaugeSweepAngle="0"
+                           />
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@+id/age4"
+                           android:textColor="@color/white"
+                           android:layout_centerVertical="true"
+                           android:text="10 - 17 old" />
+
+                   </RelativeLayout>
+
+
+
+               </LinearLayout>
+               </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+
+
+    <RelativeLayout
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="-10dp"
+        android:layout_height="200dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:background="@color/blue"
+            android:layout_margin="2dp"
+            android:layout_height="match_parent">
+
+        <com.example.tulipsante.pulse.oximeter.view.view.SpoView
+            android:id="@+id/spoview"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_marginTop="11dp"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:gravity="center"
+           android:layout_height="wrap_content">
+       <Button
+           android:text="SAVE"
+
+           android:layout_centerHorizontal="true"
+           android:background="@color/green"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+           <Button
+               android:text="CANCEL"
+               android:id="@+id/cancelPulse"
+               android:layout_centerHorizontal="true"
+               android:background="@color/red"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+   </RelativeLayout>
+
+</LinearLayout>
