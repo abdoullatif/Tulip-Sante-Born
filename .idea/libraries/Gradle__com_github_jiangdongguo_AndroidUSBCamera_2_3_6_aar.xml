@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jiangdongguo:AndroidUSBCamera:2.3.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ae196f10e7e5cb930890d6a743fca4d/jetified-AndroidUSBCamera-2.3.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ae196f10e7e5cb930890d6a743fca4d/jetified-AndroidUSBCamera-2.3.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4ae196f10e7e5cb930890d6a743fca4d/jetified-AndroidUSBCamera-2.3.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jiangdongguo/AndroidUSBCamera/2.3.6/aa76848c6dbd5d7f9d928411f2b283970970a730/AndroidUSBCamera-2.3.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

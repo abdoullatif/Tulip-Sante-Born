@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:padding="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.dialogFragment.LoginSADialogFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:id="@+id/bottom_sheet"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="?attr/colorPOther"
+        android:layout_marginBottom="30dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cancelDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="100dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="?attr/backButton"
+            android:layout_marginBottom="0dp">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_close_black_24dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewMore"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center|top"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/lato"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/super_admin_login" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="50dp"
+            android:orientation="vertical">
+            <EditText
+                android:textColor="@color/WHITE"
+                android:id="@+id/editTextUsername"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grey"
+                android:background="@drawable/bg_edittext"
+                android:drawableStart="@drawable/ic_account_black_24dp"
+                android:drawablePadding="15dp"
+                android:hint="@string/username"
+                android:padding="16dp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:textColor="@color/WHITE"
+                android:textColorHint="@color/grey"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_vpn_key_black_24dp"
+                android:drawablePadding="15dp"
+                android:hint="@string/password"
+                android:padding="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonLogin"
+                android:elevation="0dp"
+                android:shadowColor="@color/colorWhite"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:text="@string/login"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

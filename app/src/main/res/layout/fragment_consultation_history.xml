@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPOther"
+    tools:context=".views.fragments.ConsultationHistoryFragment">
+
+    <TextView
+        android:paddingBottom="10dp"
+        android:id="@+id/textViewPatient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/historique_consultation"
+        android:textSize="20sp"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="?attr/primaryTextColor"
+        android:fontFamily="@font/lato"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_below="@+id/textViewPatient"
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="450dp"
+            android:focusable="false"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:inputType="textShortMessage"
+            android:textColorHint="@color/grey"
+            android:fontFamily="@font/lato"
+            android:background="@drawable/bg_edittext"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="@string/search_by_date_yyyy_MM_dd"
+            android:padding="8dp" />
+        <TextView
+            android:id="@+id/sortBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/primaryTextColor"
+            android:fontFamily="@font/lato"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/sort_by"/>
+        <Spinner
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/spinner1"
+            android:fontFamily="@font/lato"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_edittext"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+    <TableLayout
+        android:layout_below="@id/linearLayout1"
+        android:id="@+id/tabLayout"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableRow
+            android:background="?attr/colorPD"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/colorWhite"
+                android:text="@string/date" />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/colorWhite"
+                android:text="@string/doctor" />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/colorWhite"
+                android:text="@string/id" />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/colorWhite"
+                android:text="@string/description" />
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@font/lato"
+                android:textColor="@color/colorWhite"
+                android:text="@string/action" />
+        </TableRow>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewConsultations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </TableLayout>
+
+</RelativeLayout>

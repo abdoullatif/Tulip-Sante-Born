@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorConsultationTools"
+    tools:context=".views.activities.PulseOxymeterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/uppperToolbar"
+        android:background="?attr/colorPDOther"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewBack"
+                android:layout_gravity="top"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/backButton">
+                <ImageView
+                    android:padding="5dp"
+                    android:id="@+id/imageViewBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close_black_24dp"/>
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/tuliplog"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEndo"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="100dp"
+                android:onClick="onClick"
+                app:cardBackgroundColor="?attr/backButton">
+                <ImageView
+                    android:padding="5dp"
+                    android:id="@+id/imageViewEndo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_pulse"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_below="@id/uppperToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:paddingStart="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato"
+                android:gravity="start|center"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:text="ECG Wavefrom"/>
+
+            <TextView
+                android:paddingEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/GREEN_A060"
+                android:text="Spo2(%)"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart1"
+                android:padding="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_border"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvSpO2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/GREEN_A060"
+                    android:textSize="70sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="..."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:paddingStart="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato"
+                android:gravity="start|center"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:text="Pulse Oximeter"/>
+
+            <TextView
+                android:paddingEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:textColor="@color/YELLOW"
+                android:textStyle="bold"
+                android:text="Heart Rate (bpm)"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart2"
+                android:padding="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_gravity="end"
+                android:background="@drawable/card_border_yellow"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tvPulseRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/YELLOW"
+                    android:textSize="70sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="..."/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:paddingStart="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato"
+                android:gravity="start|center"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:text="P I"/>
+
+            <TextView
+                android:paddingEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:textColor="@color/RED_400_A090"
+                android:textStyle="bold"
+                android:text="PI(%)"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                android:layout_gravity="end"
+                app:cardBackgroundColor="@color/colorAccent2"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/RED_400_A090"
+                    android:textSize="90sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="70"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_below="@id/uppperToolbar"-->
+<!--        android:layout_toEndOf="@id/linear1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--        -->
+<!--    </LinearLayout>-->
+<!--        -->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:orientation="horizontal">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="24sp"-->
+<!--            android:text="SpO2: "/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvSpO2"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:textSize="24sp"-->
+<!--            android:text="- -"/>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="24sp"-->
+<!--            android:text="Pulse Rate: "-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvPulseRate"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:textSize="24sp"-->
+<!--            android:text="- -"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:gravity="right">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@android:color/holo_blue_dark"-->
+<!--            android:onClick="onClick"-->
+<!--            android:text="Click Me"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="24sp"/>-->
+
+<!--    </LinearLayout>-->
+</RelativeLayout>

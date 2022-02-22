@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/textViewVital"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:text="" />
+        <TextView
+            android:id="@+id/textViewValue"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:text="" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttonAction"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/blue"
+            android:layout_marginBottom="0dp">
+            <TextView
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="Delete"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+    </TableRow>
+</RelativeLayout>

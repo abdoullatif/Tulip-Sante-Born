@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPOther"
+    android:padding="15dp"
+    tools:context=".views.fragments.MedicalHistoryPatientFragment">
+
+    <TextView
+        android:paddingBottom="10dp"
+        android:id="@+id/textViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medical_history"
+        android:textSize="20sp"
+        android:textColor="?attr/primaryTextColor"
+        android:fontFamily="@font/lato"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewVice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vices"
+                android:textSize="16sp"
+                android:paddingBottom="10dp"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewVices"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="0dp"
+                android:background="?attr/colorA2"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewAntecedent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/antecedents"
+                android:textSize="16sp"
+                android:paddingBottom="10dp"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewAntecedents"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="0dp"
+                android:background="?attr/colorA2"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewAlFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allergies_food"
+                android:textSize="16sp"
+                android:paddingBottom="10dp"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewAllFood"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="0dp"
+                android:background="?attr/colorA2"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewAllDrugs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allergies_drugs"
+                android:textSize="16sp"
+                android:paddingBottom="10dp"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/lato"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recViewAllDrugs"
+                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="0dp"
+                android:background="?attr/colorA2"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

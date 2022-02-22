@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:id="@+id/bottom_sheet"
+        android:background="@color/blue"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorWhite"
+            android:text="Change Profile Picture"
+            android:fontFamily="@font/lato"/>
+        <View
+            android:layout_below="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"/>
+        <TextView
+            android:id="@+id/textViewChoose"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="Take Photo"
+            android:fontFamily="@font/lato"/>
+    </LinearLayout>
+</RelativeLayout>
+
