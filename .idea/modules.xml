@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tulip_Sante.iml" filepath="$PROJECT_DIR$/.idea/modules/Tulip_Sante.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MPChartLib/Tulip_Sante.MPChartLib.iml" filepath="$PROJECT_DIR$/.idea/modules/MPChartLib/Tulip_Sante.MPChartLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tulip_Sante.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tulip_Sante.app.iml" />
+    </modules>
+  </component>
+</project>

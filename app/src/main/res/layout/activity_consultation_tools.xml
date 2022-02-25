@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorConsultationTools"
-    tools:context=".views.activities.ConsultationToolsActivity">
+    tools:context=".views.activities.ConsultationToolsActivity"
+    android:orientation="vertical">
+
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:background="?attr/colorPDOther"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="top">
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewBack"
             android:layout_width="wrap_content"
@@ -47,315 +51,539 @@
         </androidx.cardview.widget.CardView>
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewTempCaptured"
-        android:layout_toStartOf="@id/imageViewHuman"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        app:cardCornerRadius="20dp"
-        android:elevation="0dp"
-        android:visibility="invisible"
-        app:cardBackgroundColor="@color/red">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <ImageView
-                android:padding="2dp"
-                android:id="@+id/imageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_temperature_white"/>
-            <TextView
-                android:id="@+id/textViewTemp"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="30 C "
-                android:textColor="@color/WHITE"
-                android:fontFamily="@font/lato"
-                android:textSize="16dp"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewPulseCaptured"
-        android:layout_toEndOf="@id/imageViewHuman"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        app:cardCornerRadius="20dp"
-        android:elevation="0dp"
-        android:visibility="invisible"
-        app:cardBackgroundColor="@color/blue">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:padding="2dp"
-                android:layout_width="40dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:text="Spo2"/>
-            <TextView
-                android:id="@+id/textViewSpo2"
-                android:padding="5dp"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textColor="@color/WHITE"
-                android:fontFamily="@font/lato"
-                android:textSize="16sp"/>
-            <TextView
-                android:padding="2dp"
-                android:layout_width="40dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:text="Pi"/>
-            <TextView
-                android:id="@+id/textViewPi"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textColor="@color/WHITE"
-                android:fontFamily="@font/lato"
-                android:textSize="16sp"/>
-            <TextView
-                android:padding="2dp"
-                android:layout_width="40dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_height="match_parent"
-                android:textColor="@color/white"
-                android:text="PR"/>
-            <TextView
-                android:id="@+id/textViewPr"
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text=""
-                android:textColor="@color/WHITE"
-                android:fontFamily="@font/lato"
-                android:textSize="16sp"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-
-    <ImageView
-        android:id="@+id/imageViewHuman"
-        android:layout_below="@id/toolbar"
-        android:layout_width="180dp"
-        android:layout_height="500dp"
-        android:src="@drawable/human"
-        android:layout_centerInParent="true"/>
-
-    <ImageView
-        android:id="@+id/imageViewHuman2"
-        android:layout_below="@id/toolbar"
-        android:layout_width="180dp"
-        android:visibility="invisible"
-        android:layout_height="500dp"
-        android:src="@drawable/human2"
-        android:layout_centerInParent="true"/>
-
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/relativeLayout"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="0dp"
+        android:paddingTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewUltrasound"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
-            android:elevation="20dp"
-            app:cardBackgroundColor="?attr/colorPDOther"
-            android:layout_marginBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="700dp"
+            android:layout_height="120dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
             <LinearLayout
-                android:padding="5dp"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:id="@+id/imageViewUltra"
-                    android:layout_gravity="center"
-                    android:layout_width="70dp"
-                    android:src="@drawable/ic_ultrasound"
-                    android:layout_height="130dp"/>
-                <TextView
-                    android:id="@+id/textViewUltra"
-                    android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="30dp">
+
+                <androidx.cardview.widget.CardView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lato"
-                    android:textStyle="normal"
-                    android:text="@string/ultrasound"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="120dp"
+                    app:cardPreventCornerOverlap="true">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewUltraImages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="18dp"
-            android:elevation="0dp"
-            android:visibility="invisible"
-            app:cardBackgroundColor="@color/red">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:padding="5dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_ultrasound"/>
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/blood_pressure" />
+
+                </androidx.cardview.widget.CardView>
+
 
                 <TextView
-                    android:id="@+id/textViewNumImg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/lato"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:text="3 images"
-                    android:textColor="@color/WHITE"
-                    android:textSize="15sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginStart="200dp"
-            android:layout_marginBottom="30dp"
-            android:layout_toEndOf="@+id/cardViewThermal"
-            android:id="@+id/cardViewEndoscope"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
-            android:elevation="20dp"
-            app:cardBackgroundColor="?attr/colorPDOther"
-            >
-            <LinearLayout
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:id="@+id/imageViewEndo"
-                    android:layout_gravity="center"
-                    android:layout_width="70dp"
-                    android:src="@drawable/ic_endo"
-                    android:layout_height="130dp"/>
-                <TextView
-                    android:id="@+id/textViewEndo"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lato"
-                    android:textStyle="normal"
-                    android:text="@string/endoscope"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:text="blood pressure"
+                    android:textColor="@android:color/white" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardViewThermal"
-            android:layout_below="@+id/cardViewUltrasound"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
-            android:elevation="20dp"
-            app:cardBackgroundColor="?attr/colorPDOther">
+            </LinearLayout>
+
             <LinearLayout
-                android:padding="5dp"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:id="@+id/imageViewTemp"
-                    android:layout_gravity="center"
-                    android:layout_width="70dp"
-                    android:src="@drawable/ic_temperature_white"
-                    android:layout_height="130dp"/>
-                <TextView
-                    android:id="@+id/textViewTemperature"
-                    android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPulse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lato"
-                    android:textStyle="normal"
-                    android:text="@string/thermal_camera"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_below="@+id/cardViewEndoscope"
+                    android:layout_toEndOf="@+id/cardViewThermal"
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
 
-        <androidx.cardview.widget.CardView
-            android:layout_marginStart="200dp"
-            android:layout_below="@+id/cardViewEndoscope"
-            android:layout_toEndOf="@+id/cardViewThermal"
-            android:id="@+id/cardViewPulse"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
-            android:elevation="20dp"
-            app:cardBackgroundColor="?attr/colorPDOther"
-            >
-            <LinearLayout
-                android:padding="5dp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:id="@+id/imageViewPulse"
-                    android:layout_gravity="center"
-                    android:layout_width="70dp"
-                    android:src="@drawable/ic_pulse"
-                    android:layout_height="130dp"/>
+                    <ImageView
+                        android:id="@+id/imageViewPulse"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/pulse_oxymeter" />
+
+                </androidx.cardview.widget.CardView>
+
+
                 <TextView
                     android:id="@+id/textViewPulse"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lato"
-                    android:textStyle="normal"
-                    android:text="@string/pulse_oxymeter"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp" />
+                    android:text="pulse oxymeter"
+                    android:textColor="@android:color/white" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPulseCaptured"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_gravity="end"
+                    android:layout_toEndOf="@id/imageViewHuman"
+                    android:elevation="0dp"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Spo2"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textViewSpo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/WHITE"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="Pi"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textViewPi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/WHITE"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="PR"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textViewPr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/WHITE"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingRight="30dp">
 
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewThermal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardViewUltrasound"
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewTemp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/thermographie" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textViewTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="thermographie"
+                    android:textColor="@android:color/white" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewTempCaptured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_gravity="end"
+                    android:layout_toStartOf="@id/imageViewHuman"
+                    android:elevation="0dp"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="@color/red"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_temperature_white" />
+
+                        <TextView
+                            android:id="@+id/textViewTemp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="30 C "
+                            android:textColor="@color/WHITE"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingRight="0dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewUltrasound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewUltra"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ultrasound" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textViewUltra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ultrasound"
+                    android:textColor="@android:color/white" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewUltraImages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:elevation="0dp"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="@color/red"
+                    app:cardCornerRadius="18dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_ultrasound" />
+
+                        <TextView
+                            android:id="@+id/textViewNumImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="3 images"
+                            android:textColor="@color/WHITE"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imageViewHuman"
+                    android:layout_width="200dp"
+                    android:layout_height="270dp"
+                    android:layout_below="@id/toolbar"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tulip_medical_humain_3d" />
+                <!--
+
+                                    android:padding="1dp"
+                                    app:strokeWidth="2dp"
+                                    app:strokeColor="@android:color/black"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+
+
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="200dp"
+                                android:src="@drawable/tulip_medical_humain_3d"/>
+                -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="30dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewEndoscope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/cardViewThermal"
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewEndo"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/endoscope" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textViewEndo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="endoscope"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="700dp"
+            android:layout_height="120dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="0dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/scale" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="scale"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="30dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/microscope" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="microscope"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardBackgroundColor="@color/WHITE"
+                    app:cardCornerRadius="50dp"
+
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/stestoscope" />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="stestoscope"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 

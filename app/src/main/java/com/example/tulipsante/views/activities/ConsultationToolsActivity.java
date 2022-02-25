@@ -92,7 +92,7 @@ public class ConsultationToolsActivity extends AppCompatActivity {
         cardViewSave = findViewById(R.id.cardViewSave);
         cardViewTempCaptured = findViewById(R.id.cardViewTempCaptured);
         imageViewHuman1 = findViewById(R.id.imageViewHuman);
-        imageViewHuman2 = findViewById(R.id.imageViewHuman2);
+        //imageViewHuman2 = findViewById(R.id.imageViewHuman2);
         textViewTemp = findViewById(R.id.textViewTemp);
         cardViewUltraImages = findViewById(R.id.cardViewUltraImages);
         cardViewPulseCaptured = findViewById(R.id.cardViewPulseCaptured);
@@ -155,7 +155,7 @@ public class ConsultationToolsActivity extends AppCompatActivity {
         initialisation();
 
         navigateBack();
-        onHumanPressed();
+        //onHumanPressed();
         onSaveButtonClicked();
 
         IntentFilter filter = new IntentFilter();
