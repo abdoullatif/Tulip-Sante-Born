@@ -14,8 +14,6 @@
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,6 +31,11 @@
         <activity android:name=".views.activities.RelationManagementActivity" />
         <activity
             android:name=".views.activities.PulseOxymeterActivity"
+            android:directBootAware="true"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".views.activities.ScaleActivity"
             android:directBootAware="true"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity" />
@@ -125,6 +128,11 @@
 
         <uses-library android:name="com.android.future.usb.accessory" />
 
+
+        <service
+            android:name="com.example.tulipsante.utils.UsbService"
+            android:enabled="true">
+        </service>
 
 
     </application>

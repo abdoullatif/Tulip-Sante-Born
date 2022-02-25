@@ -55,6 +55,7 @@ public class ConsultationToolsActivity extends AppCompatActivity {
             imageViewEndo,
             imageViewTemp,
             imageViewPulse,
+            imageViewScale,
             imageViewHuman2;
     private CardView cardViewUltrasound,
             cardViewEndoscope,
@@ -63,13 +64,15 @@ public class ConsultationToolsActivity extends AppCompatActivity {
             cardViewTempCaptured,
             cardViewSave,
             cardViewUltraImages,
-            cardViewPulseCaptured
+            cardViewPulseCaptured,
+            cardViewScale
     ;
     private TextView textViewTemp,
             textViewUltra,
             textViewEndo,
             textViewTemperature,
             textViewPulse,
+            textViewScale,
             textViewNumImg,
             textViewSpo2,
             textViewPi,
@@ -89,6 +92,9 @@ public class ConsultationToolsActivity extends AppCompatActivity {
         cardViewEndoscope = findViewById(R.id.cardViewEndoscope);
         cardViewThermal = findViewById(R.id.cardViewThermal);
         cardViewPulse = findViewById(R.id.cardViewPulse);
+        //
+        cardViewScale = findViewById(R.id.cardViewScale);
+        //
         cardViewSave = findViewById(R.id.cardViewSave);
         cardViewTempCaptured = findViewById(R.id.cardViewTempCaptured);
         imageViewHuman1 = findViewById(R.id.imageViewHuman);
@@ -140,6 +146,7 @@ public class ConsultationToolsActivity extends AppCompatActivity {
             openPulse();
             openUltrasound();
             openEndoscope();
+            openScale();
         }
     }
 
@@ -271,6 +278,19 @@ public class ConsultationToolsActivity extends AppCompatActivity {
 //                hasUltrasoundBeenClicked = false;
                 Intent intent = new Intent(ConsultationToolsActivity.this, EndoscopeActivity.class);
                 startActivity(intent);
+//            }
+//            else {
+//                Toast.makeText(this, "Plug Endoscope!", Toast.LENGTH_SHORT).show();
+//            }
+        });
+    }
+
+    private void openScale() {
+        cardViewScale.setOnClickListener(view -> {
+//            if (endo) {
+//                hasUltrasoundBeenClicked = false;
+            Intent intent = new Intent(ConsultationToolsActivity.this, ScaleActivity.class);
+            startActivity(intent);
 //            }
 //            else {
 //                Toast.makeText(this, "Plug Endoscope!", Toast.LENGTH_SHORT).show();
