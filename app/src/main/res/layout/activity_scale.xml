@@ -51,18 +51,39 @@
         </androidx.cardview.widget.CardView>
     </androidx.appcompat.widget.Toolbar>
 
-
-
-    <TextView
+    <LinearLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/imageView"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/WHITE"
-        android:padding="20dp"
-        android:text="Balance Digital"
-        android:textSize="34sp" />
+        android:layout_centerInParent="true"
+        android:paddingBottom="0dp"
+        android:paddingTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:padding="20dp"
+            android:text="Balance Digital"
+            android:textColor="@color/WHITE"
+            android:textSize="34sp" />
+
+        <com.ekn.gruzer.gaugelibrary.HalfGauge
+            android:id="@+id/halfGauge"
+            android:layout_width="442dp"
+            android:layout_height="347dp"
+            android:elevation="10dp"
+            android:textColor="@color/WHITE" />
+
+
+    </LinearLayout>
+
+
+
+    <!--
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="231dp"
@@ -73,12 +94,6 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="213dp"
         tools:layout_editor_absoluteY="116dp" />
-
-
-    <com.ekn.gruzer.gaugelibrary.HalfGauge
-        android:id="@+id/halfGauge"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -127,6 +142,6 @@
         android:textSize="30sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="341dp"
-        tools:layout_editor_absoluteY="438dp" />
+        tools:layout_editor_absoluteY="438dp" />-->
 
 </RelativeLayout>

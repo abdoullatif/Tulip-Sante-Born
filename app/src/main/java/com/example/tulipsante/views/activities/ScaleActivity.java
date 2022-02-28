@@ -1,27 +1,34 @@
 package com.example.tulipsante.views.activities;
 
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 //import android.support.v7.app.AppCompatActivity;
+import android.preference.PreferenceManager;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.ekn.gruzer.gaugelibrary.HalfGauge;
 import com.example.tulipsante.R;
 import com.example.tulipsante.utils.UsbService;
 
 import java.lang.ref.WeakReference;
+import java.util.Objects;
 import java.util.Set;
 
 public class ScaleActivity extends AppCompatActivity {
@@ -29,6 +36,7 @@ public class ScaleActivity extends AppCompatActivity {
 
 
     private ImageView imageViewBackButton;
+    private CardView cardViewSave;
     private HalfGauge halfGauge;
 
 
@@ -45,7 +53,12 @@ public class ScaleActivity extends AppCompatActivity {
 
     private void initViews() {
         imageViewBackButton = findViewById(R.id.imageViewBackButton);
+        cardViewSave = findViewById(R.id.cardViewSave);
         halfGauge = findViewById(R.id.halfGauge);
+        //set min max and current value
+        halfGauge.setMinValue(0.0);
+        halfGauge.setMaxValue(150.0);
+        halfGauge.setValueColor(Color.parseColor("#FFFFFF"));
     }
 
     /*
@@ -90,26 +103,17 @@ public class ScaleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setApplicationTheme();
         setContentView(R.layout.activity_scale);
 
         initViews();
 
         mHandler = new MyHandler(this);
 
-        display = (EditText) findViewById(R.id.editTextPoids);
-        //editText = (EditText) findViewById(R.id.editText1);
-        // Button sendButton = (Button) findViewById(R.id.buttonSend);
-        // sendButton.setOnClickListener(new View.OnClickListener() {
-        //   @Override
-        //   public void onClick(View v) {
-        //     if (!editText.getText().toString().equals("")) {
-        //        String data = editText.getText().toString();
-        //      if (usbService != null) { // if UsbService was correctly binded, Send data
-        //        usbService.write(data.getBytes());
-        //   }
-        // }
-        // }
-        //});
+        onSaveButtonClicked();
+
 
         navigateBack();
 
@@ -184,7 +188,8 @@ public class ScaleActivity extends AppCompatActivity {
                         if(data.length() >= 3){
                             //
                             if (data.equals("0.0")) {
-                                mActivity.get().display.setText(data);
+                                //mActivity.get().display.setText(data);
+                                mActivity.get().halfGauge.setValueColor(Color.parseColor("#FFFFFF"));
                                 mActivity.get().halfGauge.setValue(Double.parseDouble(data));
                                 verifie = true;
                             }
@@ -202,13 +207,13 @@ public class ScaleActivity extends AppCompatActivity {
                                 resultBalance = resultPrime;
                                 cpt = 0;
                                 if (verifie) {
-                                    mActivity.get().display.setText(data);
+                                    //mActivity.get().display.setText(data);
                                     mActivity.get().halfGauge.setValue(Double.parseDouble(data));
                                 }
                             }
                             //
                             if (cpt == 4) {
-                                mActivity.get().display.setText(data);
+                                //mActivity.get().display.setText(data);
                                 mActivity.get().halfGauge.setValue(Double.parseDouble(data));
                                 System.out.println("POID VALIDER ");
                                 verifie = false;
@@ -222,7 +227,7 @@ public class ScaleActivity extends AppCompatActivity {
                     //mActivity.get().display.setText(data);
 
 
-                    Toast.makeText(mActivity.get(), "longueur " + s, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(mActivity.get(), "longueur " + s, Toast.LENGTH_SHORT).show();
                     break;
 
                 case UsbService.CTS_CHANGE:
@@ -237,8 +242,37 @@ public class ScaleActivity extends AppCompatActivity {
 
     //
 
+    private void setApplicationTheme() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String currentTheme = sharedPreferences.getString("current_Theme",null);
+        if(Objects.requireNonNull(currentTheme).equals("dark")) {
+            setTheme(R.style.AppTheme);
+        }
+        else {
+            setTheme(R.style.LightTheme);
+        }
+    }
+
     private void navigateBack() {
         imageViewBackButton.setOnClickListener(view -> finish());
+    }
+
+
+    public void onSaveButtonClicked() {
+        cardViewSave.setOnClickListener(view -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Confirm");
+            builder.setMessage("Do you want to save data?");
+            builder.setPositiveButton("Yes/Continue", (dialogInterface, i) -> {
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("temp ","10");
+                setResult(RESULT_OK,returnIntent);
+                finish();
+            });
+            builder.setNegativeButton("Cancel", null);
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        });
     }
 
 
